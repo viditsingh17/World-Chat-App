@@ -6,7 +6,7 @@ $('document').ready(()=>{
     //function definitions here
     function getCurrentTime(){
       const date = new Date($.now());
-      const hr = date.getHours();
+      var hr = date.getHours();
       const min = date.getMinutes();
       var meridian = '';
       if(hr>12){
