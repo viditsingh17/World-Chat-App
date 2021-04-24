@@ -10,7 +10,7 @@ const server = app.listen(PORT, function(){
 app.use(express.static('.'));
 
 app.get('/',(req, res)=>{
-    res.send('<h1>Real World Chat server is Running</h1>');
+    res.sendFile('./index.html', {root:'RealTimeChatApp'});
 });
 
 //socket setup
