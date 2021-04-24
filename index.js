@@ -9,6 +9,10 @@ const server = app.listen(PORT, function(){
 //static file
 app.use(express.static('.'));
 
+app.get('/',(req, res)=>{
+    res.send('<h1>Real World Chat server is Running</h1>');
+});
+
 //socket setup
 const io = require('socket.io')(server, {
     cors: {
