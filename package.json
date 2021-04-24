@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon script.js"
   },
   "author": "Vidit Singh Brahmania",
   "license": "MIT",
