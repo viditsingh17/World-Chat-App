@@ -1,4 +1,4 @@
-$('document').ready(()=>{
+jQuery(()=>{
     //we call the current client as the 'user' and the other client as 'bot'
     //Global variables
     var outputArea = $('#chat-output');
