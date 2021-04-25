@@ -1,4 +1,4 @@
-jQuery(()=>{
+$('document').ready(()=>{
     //we call the current client as the 'user' and the other client as 'bot'
     //Global variables
     var outputArea = $('#chat-output');
@@ -45,7 +45,8 @@ jQuery(()=>{
     }
 
     // Code starts here
-    const socket = io();
+    // const socket = io('http://localhost:3000');
+    const socket = io.connect();
     const name = prompt('Name yourself?');
     socket.emit('new-user', name);
     outputArea.append(
