@@ -45,7 +45,7 @@ $('document').ready(()=>{
     }
 
     // Code starts here
-    const socket = io('http://localhost:3000');
+    const socket = io();
     const name = prompt('Name yourself?');
     socket.emit('new-user', name);
     outputArea.append(

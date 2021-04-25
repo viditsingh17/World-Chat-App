@@ -1,17 +1,15 @@
 const express = require('express');
 
-//App setup
-const PORT = 3000;
-const app = express();
-const server = app.listen(process.env.PORT || PORT, function(){
-    console.log(`listening on ${process.env.PORT}`);
-});
-//static file
-app.use(express.static('.'));
 
-app.get('/',(req, res)=>{
-    res.sendFile('./index.html', {root:'RealTimeChatApp'});
+//App setup
+const PORT = process.env.PORT || 3000;
+const INDEX = '/index.html';
+const app = express();
+const server = app.listen(PORT, function() {
+    console.log(`Listening on ${PORT}`);
 });
+
+app.use((req, res) => res.sendFile(INDEX, { root: __dirname }));
 
 //socket setup
 const io = require('socket.io')(server, {
